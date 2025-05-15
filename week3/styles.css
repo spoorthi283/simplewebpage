@@ -1,0 +1,91 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to right, #1d7d8a, #42641b);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: #4d0303;
+  border-radius: 15px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  padding: 20px;
+  margin-bottom: 25px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5, #1fd1f9);
+}
+
+h2 {
+  color: #2e3c6a;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #ff6f00;
+  color: white;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65100;
+}
+
+.joke {
+  margin-top: 15px;
+  font-style: italic;
+  color: #333;
+}
+
+#quiz-result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}

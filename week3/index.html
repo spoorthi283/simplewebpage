@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Week 3 Task</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h2>Responsive Design Example</h2>
+    <p>This section adjusts for mobile, tablet, and desktop screens using media queries.</p>
+  </div>
+
+  <div class="container">
+    <h2>🧠 Interactive Quiz</h2>
+    <p>Which language runs in a web browser?</p>
+    <form id="quiz-form">
+      <label><input type="checkbox" name="option" value="Python"> A. Python</label><br>
+      <label><input type="checkbox" name="option" value="C"> B. C</label><br>
+      <label><input type="checkbox" name="option" value="JavaScript"> C. JavaScript</label><br>
+      <button type="submit">Check Answer</button>
+    </form>
+    <p id="quiz-result"></p>
+  </div>
+
+  <div class="container">
+    <h2>😂 Joke Generator (API)</h2>
+    <button onclick="getJoke()">Get a Joke</button>
+    <p class="joke" id="joke"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

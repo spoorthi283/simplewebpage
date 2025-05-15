@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spoorthi Reddy | Portfolio</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 20px;
+    background: #f0f4f8;
+    color: #333;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  header h1 {
+    color: #004080;
+    font-size: 2.5em;
+    margin: 0;
+  }
+  section {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+  }
+  section h2 {
+    color: #004080;
+    border-bottom: 3px solid #f0a500;
+    padding-bottom: 8px;
+    margin-top: 0;
+  }
+  #projects ul {
+    list-style: disc inside;
+    font-size: 1.1em;
+  }
+  #contact a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  nav {
+    text-align: center;
+    margin-top: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    color: #f0a500;
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+  nav a:hover {
+    color: #cf8500;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Vennam Spoorthi Reddy</h1>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am a B.Tech student in Electrical and Electronics Engineering at Malla Reddy Engineering College for Women. Passionate about web and software development, I love building solutions that solve real-world problems and creating interactive user experiences.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Auction Bazaar:</strong> Online auction platform using Spring Boot, MySQL, and Bubble.io.</li>
+    <li><strong>Vehicle Charge Scanner:</strong> IoT system for automating traffic violation fine issuance.</li>
+    <li><strong>Spy Robot:</strong> IoT-enabled robot for remote surveillance with ESP32 and multiple sensors.</li>
+    <li><strong>Voice-Controlled Wheelchair:</strong> Smart wheelchair controlled by voice commands.</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:spoorthireddyvennam@gmail.com">spoorthireddyvennam@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/spoorthi-reddy-vennam-005a5729a" target="_blank" rel="noopener">Spoorthi Reddy</a></p>
+</section>
+
+<nav>
+  <a href="todo-products.html" target="_blank">Go to To-Do & Products Page</a>
+</nav>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>To-Do List & Product Listing</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 20px;
+    background: #f0f4f8;
+    color: #333;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1, h2 {
+    text-align: center;
+    color: #004080;
+  }
+  section {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+  }
+  /* To-Do List */
+  #todo form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  #todo input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #004080;
+    border-radius: 8px;
+    font-size: 1.1em;
+  }
+  #todo button {
+    background: #f0a500;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s ease;
+  }
+  #todo button:hover {
+    background: #cf8500;
+  }
+  #todo ul {
+    list-style: none;
+    padding: 0;
+  }
+  #todo li {
+    padding: 10px 15px;
+    background: #e8f0fe;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #todo li.completed {
+    text-decoration: line-through;
+    color: #666;
+    background: #c8d6ff;
+  }
+  #todo li button {
+    background: #ff4d4d;
+    border: none;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+  }
+  #todo li button:hover {
+    background: #cc0000;
+  }
+  /* Product Listing */
+  #products .filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #products select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #004080;
+    font-size: 1em;
+  }
+  #products .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+  }
+  .product {
+    background: #eaf0f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .product h3 {
+    margin: 0 0 8px;
+    color: #004080;
+  }
+  .product p {
+    flex-grow: 1;
+    font-size: 0.9em;
+    color: #444;
+  }
+  .product .price {
+    font-weight: 700;
+    color: #f0a500;
+    margin-top: 12px;
+    font-size: 1.2em;
+  }
+  @media (max-width: 600px) {
+    #todo form {
+      flex-direction: column;
+    }
+    #todo button {
+      width: 100%;
+    }
+    #products .filters {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>To-Do List</h1>
+<section id="todo">
+  <form id="todo-form">
+    <input type="text" id="todo-input" placeholder="Add new task..." required />
+    <button type="submit">Add</button>
+  </form>
+  <ul id="todo-list"></ul>
+</section>
+
+<h1>Product Listing</h1>
+<section id="products">
+  <div class="filters">
+    <select id="filter-category">
+      <option value="all">All Categories</option>
+      <option value="electronics">Electronics</option>
+      <option value="apparel">Apparel</option>
+      <option value="books">Books</option>
+    </select>
+
+    <select id="sort-price">
+      <option value="default">Sort by Price</option>
+      <option value="asc">Price: Low to High</option>
+      <option value="desc">Price: High to Low</option>
+    </select>
+  </div>
+  <div class="product-list" id="product-list"></div>
+</section>
+
+<script>
+  // ======= To-Do List Logic ========
+  const todoForm = document.getElementById('todo-form');
+  const todoInput = document.getElementById('todo-input');
+  const todoList = document.getElementById('todo-list');
+
+  let todos = JSON.parse(localStorage.getItem('todos')) || [];
+
+  function saveTodos() {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }
+
+  function renderTodos() {
+    todoList.innerHTML = '';
+    todos.forEach((todo, index) => {
+      const li = document.createElement('li');
+      li.textContent = todo.text;
+      if (todo.completed) {
+        li.classList.add('completed');
+      }
+      // Toggle complete on click
+      li.addEventListener('click', () => {
+        todos[index].completed = !todos[index].completed;
+        saveTodos();
+        renderTodos();
+      });
+      // Delete button
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'Delete';
+      delBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        todos.splice(index,1);
+        saveTodos();
+        renderTodos();
+      });
+      li.appendChild(delBtn);
+      todoList.appendChild(li);
+    });
+  }
+
+  todoForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const newTask = todoInput.value.trim();
+    if (newTask) {
+      todos.push({text: newTask, completed: false});
+      saveTodos();
+      renderTodos();
+      todoInput.value = '';
+    }
+  });
+
+  renderTodos();
+
+  // ======= Product Listing Logic ========
+  const products = [
+    { id:1, name:'Wireless Headphones', category:'electronics', price: 1500, description: 'High-quality wireless headphones with noise cancellation.' },
+    { id:2, name:'Smartwatch', category:'electronics', price: 4500, description: 'Stylish smartwatch with fitness tracking features.' },
+    { id:3, name:'Cotton T-Shirt', category:'apparel', price: 700, description: 'Comfortable cotton T-shirt available in multiple colors.' },
+    { id:4, name:'Running Shoes', category:'apparel', price: 3000, description: 'Lightweight running shoes for everyday training.' },
+    { id:5, name:'Fiction Novel', category:'books', price: 350, description: 'Bestselling fiction novel with an exciting storyline.' },
+    { id:6, name:'Science Textbook', category:'books', price: 900, description: 'Comprehensive science textbook for high school students.' }
+  ];
+
+  const productListEl = document.getElementById('product-list');
+  const filterCategory = document.getElementById('filter-category');
+  const sortPrice = document.getElementById('sort-price');
+
+  function renderProducts() {
+    let filtered = [...products];
+    const category = filterCategory.value;
+    const sort = sortPrice.value;
+
+    if (category !== 'all') {
+      filtered = filtered.filter(p => p.category === category);
+    }
+
+    if (sort === 'asc') {
+      filtered.sort((a,b) => a.price - b.price);
+    } else if (sort === 'desc') {
+      filtered.sort((a,b) => b.price - a.price);
+    }
+
+    productListEl.innerHTML = filtered.map(p => `
+      <div class="product">
+        <h3>${p.name}</h3>
+        <p>${p.description}</p>
+        <div class="price">₹${p.price}</div>
+      </div>
+    `).join('');
+  }
+
+  filterCategory.addEventListener('change', renderProducts);
+  sortPrice.addEventListener('change', renderProducts);
+
+  renderProducts();
+</script>
+
+</body>
+</html>
